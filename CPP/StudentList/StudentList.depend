@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530650178 source:c:\users\tchofor wilson\desktop\projects\c++\studentlist\main.cpp
+	<iostream>
+	<string>
+	<conio.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1527297276 source:c:\users\tchofor wilson\desktop\projects\c++\abas company limited\main.cpp
+	<iostream>
+	<string.h>
+	<conio.h>
+	<fstream>
+

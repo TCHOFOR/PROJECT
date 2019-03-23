@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="admission" content="width=device-width, initial-scale=1">
+<script src="jquery/3.2.0/jquery.min.js"></script>
+<title>admission</title>
+<style>
+*{
+	margin: 0px;
+}
+  marquee{
+		font-family: fantasy;
+		font-size: 20px;
+		background-color: #00000f;
+		color: #003366;
+		padding: 8px;
+	}
+	header{
+		margin-left: 20px;
+		font-family: sans-serif;
+	}
+	article{
+		margin-top: 18px;
+		margin-bottom: 20px;
+	}
+	.main{
+		margin-left: 20px;
+	}
+	#register,#registration{
+	background-color: #00000f;
+	color: #ffffff;
+	padding: 8px;
+	text-align: center;
+	margin-left: 30px;
+	margin-right: 30px;
+
+	}
+	#registration{
+		display: none;
+	}
+	/*Styling the form*/
+	input[type=text],select{
+		width: 50%;
+		border-radius: 4px;
+		height: 30px;
+		margin: 8px 0px;
+		font-size: 18px;
+		border: none;
+	}
+	input[type=file]{
+		width: 100px;
+		height: 18px;
+		border: none;
+		border-radius: 2px;
+		background-color: #0033cc;
+		color: white;
+	}
+	textarea{
+		width: 50%;
+		height: 500px;
+	}
+	button{
+		width: 50%;
+		height: 30px;
+		background-color: #003300;
+		color: #ffffff;
+		border: none;
+		border-radius: 4px;
+	}
+</style>
+<script>
+$(document).ready(function(){
+	$("#register").click(function () {
+		$("#registration").slideDown("slow");
+	});
+});
+</script>
+</head>
+<body>
+     <marquee>REGISTER NOW FOR THE 2018-2019 SCHOOL YEAR</marquee>
+<header><h1>Admission Requirements<h1></header>
+	<div class="main">
+<article>
+<ul>
+	<li>Photocopy of Birth Certificate</li>
+	<li>Photocopy of Previous Class Report Sheet/Booklet</li>
+	<li>4 Passport Size Photos</li>
+	<li>A Stamped Handwritting Application.</li>
+	<li>Photocopy of Transcript for those seeking Admission into Lower Sixth.</li>
+</ul>
+</article>
+
+<div id="register">REGISTER ONLINE</div>
+<div id="registration">
+	<hr>
+   <form method="post" action="registration.php">
+
+			 <label for="first_name"><b>Surname:</b></label><br>
+			 <input type="text" name="surname" placeholder="Your First Name"><br>
+
+       <label for="last_name"><b>Given Names:</b></label><br>
+			 <input type="text" name="given_names" placeholder="Your Last Names"><br>
+
+		<label for="gender"><b>Gender:</b></label>
+     <input type="radio" name="gender" value="male">Male
+		 <input type="radio" name="gender" value="female">Female<br><br>
+
+			<label for="class"><b>Class:</b></label><br>
+			<select id="class" name="class">
+       <option value="form_two">Form Two</option>
+			 <option value="form_three">Form Three</option>
+			 <option value="form_four">Form Four</option>
+			 <option value="form_five">Form Five</option>
+			 <optgroup label="Lower_sixth">
+				 <option value="lsa">Arts</option>
+				 <option value="lss">Science</option>
+			 </optgroup>
+			 <optgroup label="Upper_Sixth">
+				 <option value="usa">Arts</option>
+				 <<option value="uss">Science</option>
+			 </optgroup>
+		 </select><br>
+
+		 <label for="birth"><b>Birth Certificate</b></label>
+		 <input type="file"><br><br>
+		 <label for="report"><b>Third Term Report Sheet<b></label>
+		 <input type="file"><br><br>
+		 <label for="transcript"><b>Transcript</b></label>
+		 <input type="file"><br><br>
+		 <label for="application"><b>Application</b></label><br>
+		 <textarea></textarea><br>
+		<button type="button" id="submit">Submit</button>
+	 </form>
+</div>
+</div>
+<script>
+ window.document.getElementById("register").onclick = function(){
+	 window.alert("Please make sure your have a scanned document of the above list on your device, that is: Birth Certifiacte,Previous class Report sheet and Transcript.");
+ }
+</script>
+</body>
+</html>

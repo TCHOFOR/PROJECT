@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1526844968 source:c:\users\tchofor wilson\desktop\projects\c++\teacher report sheet\main.cpp
+	<iostream>
+	<vector>
+	<string.h>
+

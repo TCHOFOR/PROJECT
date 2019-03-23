@@ -31,8 +31,9 @@ public:
 class Subject{
   private:
   		string name,code;
-  		Teacher teacher;
+  		string teacherName;
   public:
+  	 Teacher teacher;
      Subject( string subjName,string subjCode,Teacher teacher ){
      	name = subjName;
      	code = subjCode;
@@ -54,58 +55,18 @@ class Subject{
      	getline(cin,name);
      	cout << "Enter Code: ";
      	getline(cin,code);
+     	cout << "Enter Teacher Name: ";
+     	cin >> teacherName;
      }
      void printSubject(Teacher teacher){
      	cout << name <<"\t"<< code <<"\t"<< teacher.getTeachName() <<endl;
      }
 };
 
- class Marks{
- private:
- 	float mark1,mark2,avgMark;
- 	Subject subj;
- 	Teacher teacher;
- public:
- 	Marks(float mk1,float mk2){
- 		mark1 = mk1;
- 		mark2 = mk2;
- 		avgMark = (mk1 + mk2)/2;
- 	}
- 	Marks(){
- 		mark1 = 0.0;
- 		mark2 = 0.0;
- 		if( mark1==0 || mark2==0){
- 			avgMark = 0;
- 		}else{
- 			 avgMark = (mark1 + mark2)/2;
-         }
-    }     
- 	float getMark1(void){
- 		return mark1;
- 	}
- 	float getMark2(void){
- 		return mark2;
- 	}
- 	float getAverageMark(void){
- 		return avgMark;
- 	}
- 	void readMarks(Subject subj){
- 	     cout << "Subject: " << subj.getSubjName() <<endl;
-         cout << "Enter first Mark: ";
-         cin >> mark1;
-         cout << "Enter second Mark: ";
-         cin >> mark2;
- 	}
- };
-
 class Student{
 private:
 	string firstName,lastName,gender,dateOfBirth;
 	int admisNumber;
-protected:
-	Teacher teacher;
-	Marks mark;
-	Subject subj;
 public:
 	Student(string fname,string lname,string gen,string DoB,int number){
          firstName = fname;
@@ -153,21 +114,72 @@ public:
 	void printStudent(){
          cout << getName() <<"\t"<< gender <<"\t"<< dateOfBirth <<"\t"<< admisNumber << endl;
 	}
-	void readReport( Marks mark,Subject subj){	
-	  cout << getName() << " " << getGender() <<endl;
-	  mark.readMarks(subj);
-	}
-	void printReport(Subject subj,Teacher teacher,Marks mark){
-		showStudent();
-		cout << subj.getSubjName() <<"\t"<< teacher.getTeachName() <<"\t"<< mark.getMark1() << "\t";
-		cout << mark.getMark2() <<"\t"<<mark.getAverageMark() <<endl; 
-	}
 };
+
+
+ class StudentReport{
+ private:
+ 	float mark1,mark2,avgMark;
+ 	Subject subj;
+ 	Student stud;
+ public:
+ 	StudentReport(float mk1,float mk2){
+ 		mark1 = mk1;
+ 		mark2 = mk2;
+ 		avgMark = (mk1 + mk2)/2;
+ 	}
+ 	StudentReport(){
+ 		mark1 = 0.0;
+ 		mark2 = 0.0;
+ 		if( mark1==0 || mark2==0){
+ 			avgMark = 0;
+ 		}else{
+ 			 avgMark = (mark1 + mark2)/2;
+         }
+    }     
+ 	float getMark1(void){
+ 		return mark1;
+ 	}
+ 	float getMark2(void){
+ 		return mark2;
+ 	}
+ 	float getAverageMark(void){
+ 		return avgMark;
+ 	}
+ 	void showMarks( Student stud,Subject subj){
+ 		cout << "Subject: "<<subj.getSubjName()<< " Code: "<<subj.getSubjCode()<< " Teacher: "<<subj.teacher.getTeachName()<<endl;
+ 		cout <<stud.getName()<< " \t" << mark1 << " \t" << mark2 << "\t" << avgMark << endl;
+ 	}
+ 	/*void readMarks(Subject subj){
+ 	     cout << "Subject: " << subj.getSubjName() <<endl;
+         cout << "Enter first Mark: ";
+         cin >> mark1;
+         cout << "Enter second Mark: ";
+         cin >> mark2;
+ 	}*/
+ 	void readReport( Student stud,Subject subj){	
+ 	   cout << "Subject: " << subj.getSubjName() <<endl;	
+ 	   cout << "========================================" <<endl;	
+	   cout << stud.getName() << " " << stud.getGender() <<endl;
+	   cout << "--------------------------------------" <<endl;
+       cout << "Enter first Mark: ";
+       cin >> mark1;
+       cout << "Enter second Mark: ";
+       cin >> mark2;
+       avgMark = (mark1+mark2)/20;
+	}
+ 	void printReport(Subject subj,Student stud){
+		stud.showStudent();
+		cout << "_________________________________________________" << endl;
+		cout << subj.getSubjName() <<"\t"<< teacher.getTeachName() <<"\t"<< mark1 << "\t";
+		cout << mark2 <<"\t"<< avgMark <<endl; 
+	}
+ };
 
 int main(){
 	Teacher teach("Teacher");
 	Subject subj("Subject","SUB203",teach);
-	Marks mark(0,0);
+	StudentReport report(0,0);
 	Student stud("Student","Stude","Male","24-March-19",32552);
 	cout << "*************TEACHER INFORMATION********************"<<endl;
 	teach.readTeacher();
@@ -178,12 +190,12 @@ int main(){
 	cout << "**************STUDENT INFORMATION*********************" <<endl;
 	stud.studentInfo();
 	cout <<"\n\n";
-	stud.readReport(mark,subj);
+	report.readReport(stud,subj);
 	cout << "***********SUBJECT AND TEACHERS**********************" <<endl;
 	subj.printSubject(teach);
 	cout << "\n\n";
 	cout << "**********STUDENT AND MARKS**************************" << endl;
-	stud.printReport(subj,teach,mark);
+	report.printReport(subj,stud);
 	cout << "\n\n";
 	return 0;
 }

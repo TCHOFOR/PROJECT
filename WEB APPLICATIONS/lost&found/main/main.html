@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lost</title>
+	<meta charset="utf-8" lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="" content="LATEST,PAST,ABOUT,Lost items,post lost item,post found item">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+  <link rel="stylesheet" type="text/css" href="../css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+<style type="text/css">
+
+</style>	
+</head>
+<body>
+	<!--main header of page-->
+ <header>
+	 <h1>LOST & FOUND</h1>
+	  <p>We'll look for it</p>
+</header>
+   <nav>
+   	<a href="#" class="mainpage">LOST</a>
+   	<a href="../found/found.html">FOUND</a>
+	  <a href="../post/post.html">POST</a>
+	  <a href="../validate/validate.html">VALIDATE</a>
+	  <a href="../about/about.html" class="aboutsite">ABOUT</a>
+	  <input type="search" name="lostitems"  placeholder="Search your own item">
+	  <button type="button" id="search">Search</button>
+   </nav>	
+   <!--
+<marquee>LATEST LOST ITEMS</marquee> -->
+   <!--Section for lost items-->
+   	<section>
+   		  <article class="lost">
+            <h5>ID CARD</h5>
+   		  	<figure>
+   		  		<img src="images/idcards/image1.jpg">
+   		  	    <figcaption>
+   		  	    		<p class="name">Tchofor Wilson</p>
+   		  	    		<P class="contact">654765530</P>
+   		  	    </figcaption>	
+            <p class="details">[Details]</p>    
+   		  	</figure>
+   		  </article>
+
+          <article class="lost">
+             <h5>ID CARD</h5>
+            <figure>
+               <img src="images/idcards/image2.jpg">
+                <figcaption>
+                     <p class="name"><b class="ownerName"> </b>Enow Good</p>
+                     <P class="contact"><b class="contact">Contact: </b>654964778</P>
+                </figcaption> 
+            <p class="details">[Details]</p>    
+            </figure>
+           </article>
+        <article class="lost">
+             <h5>PASSPORT</h5>
+          <figure>
+            <img src="images/passport/image1.jpg">
+            <figcaption>
+              <p class="name">Buh Ernest</p>
+              <p class="contact">688742316</p>
+            </figcaption>
+            <p class="details">[Details]</p>
+          </figure>
+        </article>
+
+        <article class="lost">
+          <h5>VISA</h5>
+          <figure>
+            <img src="images/others/image2.jpg">
+            <figcaption>
+              <p class="name">Flask</p>
+              <p class="contact">657890234</p>
+            </figcaption>
+            <p class="details">[Details]</p>
+          </figure>
+        </article>
+        
+        <article class="lost">
+          <h5>CERTIFICATE</h5>
+          <figure>
+            <img src="images/certificates/images.jpg">
+            <figcaption>
+              <p class="name">Solange Manka'a</p>
+              <p class="contact">GBHS Fundong</p>
+            </figcaption>
+            <p class="details">[Details]</p>
+          </figure>
+        </article>
+
+        <article class="lost">
+          <h5>DRIVING LICENNCE</h5>
+          <figure>
+            <img src="images/driving_licence/image1.jpg">
+            <figcaption>
+              <p class="name">Neba George</p>
+              <p class="contact">699345782</p>
+            </figcaption>
+            <p class="details">[Details]</p>
+          </figure>
+        </article>
+
+   	</section>
+   	<!-- side for founder of item and loser of item -->
+
+
+   	<aside>
+   	 <!-- side where founder can post item he found-->	
+       
+   	<!--side where one who lost item can post-->	
+   	</aside>
+
+  <script>
+    var ownerNode = document.createNode('b');
+    //ownerNode.setAttribute('class','owner');
+    var value = document.createTextNode("Owner: ");
+    ownerNode.appendChild(value);
+    document.getElementsByClassName('name').appendChild(ownerNode);
+  </script>
+
+      <!--page footer-->
+  <footer>&copy lost&found.Inc . All Rigth Reserved 2019</footer> 	
+
+</body>
+</html>

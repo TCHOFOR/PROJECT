@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validate</title>
+    <meta charset="utf-8" lang="en">
+    <meta name="validate" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <style type="text/css">
+    	header{
+    		background-color: #00000f;
+    		color: #ffffff;
+    		text-align: center;
+    		margin: 18px 0px;
+    		padding: 12px;
+    		font-family: DejaVu Sans Mono;
+    		font-style: bold;
+    	}
+    	article{
+    		text-align: center;
+    	}
+    	.validate{
+    		box-shadow: 6px 8px 6px 0px rgba(0,0,0,0.19);
+    	}
+    	input[type="text"],textarea{
+    		width: 50%;
+    		height: 30px;
+    		border: 3px solid #000000;
+    		margin: 10px 0px;
+    		border-radius: 6px;
+    		text-align: center;
+    		padding: 4px;
+    		font-style: bold;
+    		font-size: 20px;
+    	}
+    	#submit{
+    		background-color: #006699;
+    		color: #000000;
+    		width: 52%;
+    		border: none;
+    		padding: 12px;
+    		border-radius: 6px;
+    		margin-bottom: 12px;
+    		font-weight: bold;
+    	}
+    	#submit:hover{
+    		background-color: #005580;
+    		color: #ffffff;
+    		box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.4);
+    	}
+    </style>
+
+</head>
+<body>
+	<header>PLEASE COMFIRM THAT YOU FOUND YOUR LOST ITEM</header>
+	<article class="validate">
+		<form>
+			<label for=""><b>NAME</b></label><br>
+			<input type="text" name="name" placeholder="name on the lost item"><br>
+			<label for="contact"><b>REFERENCE</b></label><br>
+			<input type="text" name="ref" placeholder="reference"><br>
+			<label for="docName"><b>DOCUMENT NAME</b></label><br>
+			<input type="text" name="docName" placeholder="documeent name"><br>
+			<textarea placeholder="ACKNOWLEDGEMENT"></textarea><br>
+			<button type="button" id="submit">VALIDATE</button>
+		</form>
+	</article>
+  <footer>&copy lost&found.Inc  All rights Reserved 2019</footer>
+</body>
+</html>

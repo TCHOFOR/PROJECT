@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+	margin: 0px;
+}
+header,footer{
+	background-color: #000000;
+	color: #ffffff;
+	font-family: sans-serif;
+}
+footer{
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+h1{
+	padding: 16px;
+	text-align: center;
+}
+nav{
+	background-color: #000033;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	z-index: 2;
+}
+nav{
+	float: left;
+}
+nav a{
+	display: inline;
+	padding: 12px 14px;
+	text-decoration: none;
+	text-align: center;
+	font-family: sans-serif;
+	color: #0000ff;
+}
+.homepage{
+	background-color: #ffffff;
+	color: #000000;
+}
+nav a:hover:not(.homepage){
+	background-color: #003300;
+	color: #ffffff;
+}
+main{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	text-align: center;
+}
+main > *{
+	padding: 10px;
+	flex: 1 100%;
+}
+.main{
+	text-align: left;
+	margin: 12px;
+}
+@media all and (min-width: 600px){
+	aside{ flex: 1 auto; }
+}
+@media all and (min-width: 800px) {
+	.main { flex: 3 0px; }
+	.notice { order: 1; flex: 1; }
+	.main { order: 2;  flex: 2;}
+	.news { order: 3;  flex: 1;}
+}
+.notice{
+	background-color: 
+}
+.date,.type{
+	text-align: left;
+}
+.subject{
+	text-align: center;
+}
+.content{
+	text-align: center;
+}
+.from,.source{
+	text-align: right;
+}
+</style>
+</head>
+<body>
+
+<header>
+       <h1 abbr="G.B.H.S Bamenda">GOVERMENT BILINGUAL HIGH SCHOOL BAMENDA</h1>
+</header>
+
+<nav>
+     <a href="School.html" class="homepage">HOME</a>
+     <a href="administration.html">ADMINISTRATION</a>
+     <a href="departments.html">DEPARTMENTS</a>
+     <a href="class.html">CLASSES</a>
+     <a href="library.html">LIBRARY</a>
+     <a href="admission.html">ADMISSION</a>
+     <a href="club.html">CLUBS</a>
+</nav>
+<main>
+	<article class="main">
+     <p>Goverment Bilingual High School was created
+			 on September 1978 as the first Goverment
+			 Secondary school in the North West Region
+			 ( North West Province by then).
+	</article>
+	<!--ASIDE FOR NOTICE-->
+	<aside class="notice">
+		<h2><u>NOTICE</u></h2>
+		<article class="notice notice1">
+			<p class="date">01-March-2019</p>
+			<p class="subject"><u>5<sup>th</sup>Sequence</u></p>
+			<p class="content">All Students are informed that 5<sup>th</sup>will begin next week<p>
+			<p class="from"><i>Principal</i></p>	
+		</article>
+	</aside>
+	<!--ASIDE FOR NEWS-->
+	<aside class="news">
+		<h2>NEWS</h2>
+		<article class="news news1">
+			<p class="content">RECRUITMENTS OF 1000 PHD HOLDERS BEGINS</p>
+			<p class="type">Social</p>
+			<p class="source"><a href="">crtv</a></p>
+		</article>
+	</aside>
+</main>
+<footer>&copy Created by TCHOFOR WILSON of  CRAFTSOFTWARE.All right Reserved</footer>
+</body>
+</html>

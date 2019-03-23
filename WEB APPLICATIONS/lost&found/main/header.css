@@ -1,0 +1,77 @@
+header{
+	text-align: center;
+	color: #000000;
+	padding: 6px;
+	margin: 0px;
+	font-family:cursive;
+	font-weight: bold;
+    font-style: italic;
+	position: relative;
+	overflow: hidden;
+}
+footer{
+	background-color: #000000;
+	color: #ffffff;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+nav{
+	background-color: #000000;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+    position: relative;
+    z-index: 2;
+}
+nav{
+    float: left;
+}
+nav a{
+	display: inline;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+    font-family: sans-serif;
+    padding: 16px 16px;
+}
+.mainpage{
+	background-color: #333300;
+}
+.aboutsite{
+	float: right;
+}
+nav a:hover:not(.mainpage){
+	background-color: #003300;
+}
+input[type="search"]{
+    margin-top: 8px;
+    margin-left: 12px;
+    height: 35px;
+    width: 200px;
+    border-radius: 4px;
+    border: 0px;
+}
+#search{
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 0px;
+    background-color: darkgreen;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+button{
+	text-align: left;
+}
+@media screen and (max-width: 700px){
+	.aboutsite{float: none;}
+	nav a { display: block; }
+	input[type="search"]{ text-align: center; margin-left: 40px; }
+	#search{ margin-left: 70px; }
+	footer{ font-size: 14px; }
+
+}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1550667092 source:c:\users\tchofor-wilson\desktop\project\c++\restuarant\main.cpp
+	<iostream>
+	<vector>
+	<string>
+
